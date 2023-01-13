@@ -10,6 +10,7 @@ import FriendList from "../widgets/FriendList"
 import SuggestedFriends from "../widgets/SuggestedFriends"
 import AdvertWidget from "../widgets/AdvertWidget"
 import Footer from "../../components/Footer"
+
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
     const { _id } = useSelector((state) => state.user)

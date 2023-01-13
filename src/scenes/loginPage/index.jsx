@@ -37,7 +37,7 @@ const LoginPage = () => {
                 } }>
                     <img src={fbLogo} height="100px"/>
                     <Typography variant="h5">
-                        Facebook Clone helps you diconnect from real world and stalk people in your life.
+                        Facebook Clone helps you diconnect from real world and stalk people all around the world.
                     </Typography>
                 </Box>
                 <LoginForm handleClick={openRegisterForm}/>
