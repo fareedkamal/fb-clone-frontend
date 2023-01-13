@@ -26,7 +26,7 @@ const LoginForm = ({handleClick}) => {
             email: process.env.GUEST_EMAIL,
             password: process.env.GUEST_PASSWORD
         }
-        const loggedInResponse = await fetch(`${process.env.SERVER_URL}/auth/login`, {
+        const loggedInResponse = await fetch(`${process.env.REACT_APP_SERVER_URL}/auth/login`, {
           method: "POST",
           body: JSON.stringify(values),
           headers: { "Content-Type": "application/json" },
