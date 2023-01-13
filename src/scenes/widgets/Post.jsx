@@ -26,7 +26,7 @@ function Post({
   
 
     const patchLike = async () => {
-        const response = await fetch(`${process.env.SERVER_URL}/posts/${postId}/like`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/posts/${postId}/like`, {
           method: "PATCH",
           headers: {
             Authorization: `Bearer ${token}`,

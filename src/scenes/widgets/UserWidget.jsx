@@ -19,7 +19,7 @@ const UserWidget = ({ userId}) => {
   const token = useSelector((state) => state.token);
   
   const getUser = async () => {
-    const response = await fetch(`${process.env.SERVER_URL}/users/${userId}`, {
+    const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });

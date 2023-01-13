@@ -20,7 +20,7 @@ function CreatePost() {
             userId: _id,
             description: post,
         }
-        const response = await fetch(`${process.env.SERVER_URL}/posts`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/posts`, {
           method: "POST",
           headers: { 
             Authorization: `Bearer ${token}`,

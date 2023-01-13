@@ -11,7 +11,7 @@ const SuggestedFriends = ({ userId }) => {
 
   const getSuggestedFriends = async () => {
     const response = await fetch(
-      `${process.env.SERVER_URL}/users/${userId}/suggestions`,
+      `${import.meta.env.VITE_SERVER_URL}/users/${userId}/suggestions`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

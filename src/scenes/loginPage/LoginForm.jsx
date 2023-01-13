@@ -23,10 +23,10 @@ const LoginForm = ({handleClick}) => {
     const loginGuest = async () => {
         console.log('sadasdasdas');
         const values = {
-            email: process.env.GUEST_EMAIL,
-            password: process.env.GUEST_PASSWORD
+            email: import.meta.env.VITE_GUEST_EMAIL,
+            password: import.meta.env.VITE_GUEST_PASSWORD
         }
-        const loggedInResponse = await fetch(`${process.env.REACT_APP_SERVER_URL}/auth/login`, {
+        const loggedInResponse = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/login`, {
           method: "POST",
           body: JSON.stringify(values),
           headers: { "Content-Type": "application/json" },
@@ -46,7 +46,7 @@ const LoginForm = ({handleClick}) => {
 
     const login = async (values, onSubmitProps) => {
         
-        const loggedInResponse = await fetch(`${process.env.SERVER_URL}/auth/login`, {
+        const loggedInResponse = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/login`, {
           method: "POST",
           body: JSON.stringify(values),
           headers: { "Content-Type": "application/json" },

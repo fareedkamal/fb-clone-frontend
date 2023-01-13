@@ -11,7 +11,7 @@ const Posts= ({ userId, isProfile = false })=> {
     const token = useSelector((state) => state.token);
     
     const getPosts = async () => {
-        const response = await fetch(`${process.env.SERVER_URL}/posts`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/posts`, {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -22,7 +22,7 @@ const Posts= ({ userId, isProfile = false })=> {
     
     const getUserPosts = async () => {
         const response = await fetch(
-        `${process.env.SERVER_URL}/posts/${userId}/posts`,
+        `${import.meta.env.VITE_SERVER_URL}/posts/${userId}/posts`,
         {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },

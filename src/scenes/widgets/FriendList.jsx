@@ -11,7 +11,7 @@ const FriendList = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `${process.env.SERVER_URL}/users/${userId}/friends`,
+      `${import.meta.env.VITE_SERVER_URL}/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

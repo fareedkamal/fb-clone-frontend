@@ -26,7 +26,7 @@ const RegisterForm = ({handleClick}) => {
         // this allows us to send form info with image
         
         const savedUserResponse = await fetch(
-          `${process.env.SERVER_URL}/auth/register`,
+          `${import.meta.env.VITE_SERVER_URL}/auth/register`,
           {
             method: "POST",
             body: JSON.stringify(values),
